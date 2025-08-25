@@ -1,5 +1,5 @@
 import { API_ROUTES } from '@/constants/routes';
-import { API_TOKEN, API_USER_TOKEN } from '@/constants/api';
+import { API_USER_TOKEN } from '@/constants/api';
 import { StrapiResponse } from '@/types';
 
 export type TOrder = {

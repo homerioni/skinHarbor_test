@@ -5,12 +5,12 @@ import { getAuthOptions } from '@/session/auth';
 async function auth(
   req: NextRequest,
   ctx: {
-    params: {
-      nextauth: string[];
-    };
+    params: Promise<{ nextauth: string[] }>;
   }
 ) {
-  return NextAuth(req, ctx, getAuthOptions(req));
+  const { params } = ctx;
+  const resolvedParams = await params; // разворачиваем Promise
+  return NextAuth(req, { params: resolvedParams }, getAuthOptions(req));
 }
 
 export { auth as GET, auth as POST };
