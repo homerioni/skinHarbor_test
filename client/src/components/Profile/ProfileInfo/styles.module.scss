@@ -1,0 +1,22 @@
+.profileList {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin: 8px 0;
+}
+
+.profileList__info {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  > svg {
+    flex: none;
+  }
+
+  > span {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}

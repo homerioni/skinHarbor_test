@@ -1,0 +1,14 @@
+.order {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+  border-radius: 6px;
+  padding: 16px;
+  background: var(--blackForBg);
+}
+
+@media (max-width: 768px) {
+  .order {
+    grid-template-columns: 1fr 1fr;
+  }
+}

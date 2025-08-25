@@ -1,0 +1,17 @@
+.cartItem {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  padding: 16px;
+  border-radius: 6px;
+  background: var(--blackForBg);
+}
+
+.cartItem__button {
+  text-align: right;
+  color: var(--gold);
+  transition: color .3s ease;
+
+  &:hover {
+    color: var(--goldHover);
+  }
+}

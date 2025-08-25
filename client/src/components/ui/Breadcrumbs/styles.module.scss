@@ -1,0 +1,32 @@
+.main {
+  width: 100%;
+  transform: translateY(6px);
+}
+
+.list {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+
+.item {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+
+  > svg {
+    height: 7px;
+    transform: translateY(-2px) rotate(90deg);
+    color: var(--gold);
+  }
+
+  > a, > span {
+    font-size: 12px;
+    line-height: 16px;
+  }
+
+  > a {
+    font-weight: 500;
+    color: var(--gold);
+  }
+}

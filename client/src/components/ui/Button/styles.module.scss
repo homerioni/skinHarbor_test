@@ -1,0 +1,16 @@
+.main {
+  padding: 12px 16px;
+  border-radius: 6px;
+  background: var(--gold);
+  transition: background .3s ease-in-out;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 14px;
+  color: #272b30;
+  text-align: center;
+  cursor: pointer;
+
+  &:hover {
+    background: var(--goldHover);
+  }
+}

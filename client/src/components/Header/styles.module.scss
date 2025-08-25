@@ -1,0 +1,28 @@
+.header {
+  position: fixed;
+  top: 0;
+  z-index: 10;
+  padding: 16px;
+  width: 100vw;
+  max-width: 100%;
+  background-color: var(--blackForBg);
+  box-shadow: 0 0 2px rgba(0, 0, 0, .25), 0 4px 8px rgba(0, 0, 0, .25);
+}
+
+.header__container {
+  display: grid;
+  grid-template-columns: 110px auto 250px;
+
+  > * {
+    &:last-child {
+      justify-content: flex-end;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .header__container {
+    display: flex;
+    justify-content: space-between;
+  }
+}

@@ -1,0 +1,57 @@
+@media (min-width: 769px) {
+  .headerLogo__burger {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .headerLogo__wrapper {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+
+  .headerLogo__burger {
+    position: relative;
+    width: 30px;
+    height: 30px;
+
+    > span, &:before, &:after {
+      content: '';
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      width: 24px;
+      height: 3px;
+      border-radius: 10px;
+      background-color: var(--foreground);
+      transition: transform .15s ease;
+    }
+
+    > span {
+      transform: translate(-50%, -50%);
+    }
+
+    &:before {
+      transform: translate(-50%, -10px);
+    }
+
+    &:after {
+      transform: translate(-50%, 7px);
+    }
+
+    &.headerLogo__burger--active {
+      > span {
+        transform: translate(-50%, -50%) scaleX(0);
+      }
+
+      &:before {
+        transform: translate(-50%, -50%) rotate(45deg);
+      }
+
+      &:after {
+        transform: translate(-50%, -50%) rotate(-45deg);
+      }
+    }
+  }
+}

@@ -1,0 +1,39 @@
+.cart__order {
+  position: sticky;
+  top: 100px;
+  align-self: start;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 16px;
+  border-radius: 6px;
+  background: #1f2225;
+
+  > p:last-of-type {
+    padding-top: 16px;
+    border-top: 1px solid white;
+  }
+}
+
+.cart__login {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  > svg {
+    width: 20px;
+    height: 20px;
+  }
+
+  > span {
+    font-family: Arial, sans-serif;
+    font-weight: 700;
+    line-height: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .cart__order {
+    position: static;
+  }
+}
